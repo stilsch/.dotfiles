@@ -1,6 +1,0 @@
-nethack on
-defscrollback 30000
-term xterm
-hardstatus alwayslastline
-hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%<'
-vbell                 off
