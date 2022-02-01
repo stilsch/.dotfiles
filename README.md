@@ -8,4 +8,4 @@ sudo apt update  && \
 sudo install git && \
 git clone https://github.com/stilsch/.dotfiles.git
 ~/.dotfiles/install.sh
-```bash
+```
