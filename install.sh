@@ -2,6 +2,7 @@
 set -e
 
 echo "link dotfiles to ~"
+echo " "
 DOTFILESDIR=~/.dotfiles/dotfiles
 
 [[ -d ~/.dotfilesbackup ]] || mkdir  ~/.dotfilesbackup
@@ -9,8 +10,8 @@ DOTFILESDIR=~/.dotfiles/dotfiles
 for DOTFILE in $(find $DOTFILESDIR -type f)
 do
   #echo $(basename $DOTFILE)
-  echo ln -s ${DOTFILE} ~/
-  [[ -f ~/$(basename $DOTFILE) ]] && echo "create backup to of ~/$(basename $DOTFILE) to ~/.dotfilesbackup/$(basename $DOTFILE)" && cp ~/$(basename $DOTFILE) ~/.dotfilesbackup/
+  echo "  ln -s ${DOTFILE} ~/"
+  [[ -f ~/$(basename $DOTFILE) ]] && echo "  create backup to of ~/$(basename $DOTFILE) to ~/.dotfilesbackup/$(basename $DOTFILE)" && cp ~/$(basename $DOTFILE) ~/.dotfilesbackup/
   echo " "
 
 done
