@@ -9,5 +9,5 @@ git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
 ~/.dotfiles/install.sh
 ```
 
-## some intesting other dotfiles
+## some intesting Other dotfiles
 https://github.com/webpro/awesome-dotfiles#readme
