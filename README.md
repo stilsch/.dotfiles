@@ -1,10 +1,18 @@
 # These are my personal dotfiles
-## installation with git
+## installation with git and sudo
 
 ```bash
 set -e
 sudo apt update  && \
 sudo apt install git -y && \
+git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
+~/.dotfiles/install.sh
+```
+## installation with git and no sudo
+```bash
+set -e
+apt update  && \
+apt install git -y && \
 git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
 ~/.dotfiles/install.sh
 ```
