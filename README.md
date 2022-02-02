@@ -4,7 +4,7 @@
 ```bash
 set -e
 sudo apt update  && \
-sudo install git && \
+sudo apt install git -y && \
 git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
 ~/.dotfiles/install.sh
 ```
