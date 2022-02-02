@@ -3,7 +3,7 @@
 
 ```bash
 # you may delete the existing folder first
-rm -f ~/.dotfiles
+rm -rf ~/.dotfiles
 
 set -e
 sudo apt update  && \
@@ -14,7 +14,7 @@ git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
 ## installation with git and no sudo
 ```bash
 # you may delete the existing folder first
-rm -f ~/.dotfiles
+rm -rf ~/.dotfiles
 
 set -e
 apt update  && \
