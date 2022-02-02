@@ -3,9 +3,16 @@ set -e
 
 echo "link dotfiles to ~"
 DOTFILESDIR=~/.dotfiles/dotfiles
+
+[[ -d ~/.dotfilesbackup ]] || mkdir  ~/.dotfilesbackup
+
 for DOTFILE in $(find $DOTFILESDIR -type f)
 do
+  #echo $(basename $DOTFILE)
   echo ln -s ${DOTFILE} ~/
+  [[ -f ~/$(basename $DOTFILE) ]] && echo "create backup to of ~/$(basename $DOTFILE) to ~/.dotfilesbackup/$(basename $DOTFILE)" && cp ~/$(basename $DOTFILE) ~/.dotfilesbackup/
+  echo " "
+
 done
 
 echo "install additional software"
@@ -14,7 +21,7 @@ hash sudo || {
   echo "sudo not installed"
   exit 1
 }
-
+exit
 
 echo "install ansible"
 sudo apt install ansible
