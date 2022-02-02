@@ -10,10 +10,10 @@ DOTFILESDIR=~/.dotfiles/dotfiles
 for DOTFILE in $(find $DOTFILESDIR -type f)
 do
   #echo $(basename $DOTFILE)
-  echo "  ln -s ${DOTFILE} ~/"
-  [[ -f ~/$(basename $DOTFILE) ]] && echo "  create backup to of ~/$(basename $DOTFILE) to ~/.dotfilesbackup/$(basename $DOTFILE)" && cp ~/$(basename $DOTFILE) ~/.dotfilesbackup/
+  [[ -f ~/$(basename $DOTFILE) ]] && echo "  create backup to of ~/$(basename $DOTFILE) to ~/.dotfilesbackup/$(basename $DOTFILE)" && mv ~/$(basename $DOTFILE) ~/.dotfilesbackup/
   echo " "
-
+  echo "  ln -fs ${DOTFILE} ~/"
+  ln -s ${DOTFILE} ~/
 done
 
 echo "install additional software"
