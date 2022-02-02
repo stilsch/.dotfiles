@@ -80,3 +80,10 @@ alias hwts2="rdesktop -K -uA333773 -dEMEA1 -z 10.10.1.11 -P -a 16 -g 1800x1024 -
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+function gitup () {
+ if [ -f $1 ] ; then
+   git add $1
+   git commit -m "$2"
+   git push -u origin main
+ fi
+}
