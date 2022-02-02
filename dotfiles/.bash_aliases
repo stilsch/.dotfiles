@@ -60,7 +60,9 @@ alias ducks='du -cks * | sort -rn | head -11'
 alias xscreen="screen -d; screen -d; screen -r"
 alias sync_Bilder_to_osmc="rsync  -av --no-perms --no-owner --no-group  --progress   --exclude _gsdata_ --exclude _Baustelle /data/Bilder/Fotos_Steffen/ -e ssh osmc:Fotos_Steffen/"
 # Proxmox
-alias update_containers="pct list | grep running | awk '{print "pct exec "$1" -- bash -c \"apt update && apt upgrade -y \" "}'   | sh -x"
+function update_containers () {
+  pct list | grep running | awk '{print "pct exec "$1" -- bash -c \"apt update && apt upgrade -y \" "}'   | sh -x
+}
 
 #ARBEIT
 alias sy051="ssh stilsch@10.10.1.20"
