@@ -27,5 +27,4 @@ hash sudo || {
 }
 exit
 
-
 # add steffen@dell ssh-key to .ssh/authorizised_key via Ansible
