@@ -27,10 +27,5 @@ hash sudo || {
 }
 exit
 
-echo "install ansible"
-sudo apt install ansible
-
 
 # add steffen@dell ssh-key to .ssh/authorizised_key via Ansible
-
-# install standard apps via ansible
