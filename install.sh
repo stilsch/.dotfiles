@@ -16,7 +16,7 @@ do
 
   echo " "
   echo "  ln -fs ${DOTFILE} ~/"
-  ln -s ${DOTFILE} ~/
+  ln -fs ${DOTFILE} ~/
 done
 
 echo "install additional software"
