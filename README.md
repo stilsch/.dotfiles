@@ -1,5 +1,5 @@
 # These are my personal dotfiles
-## installation with git and sudo
+## installation with `git` and `sudo`
 
 ```bash
 # you may delete the existing folder first
@@ -11,7 +11,7 @@ sudo apt install git -y && \
 git clone https://github.com/stilsch/.dotfiles.git ~/.dotfiles && \
 ~/.dotfiles/install.sh
 ```
-## installation with git and no sudo
+## installation with `git` and no `sudo`
 ```bash
 # you may delete the existing folder first
 rm -rf ~/.dotfiles
