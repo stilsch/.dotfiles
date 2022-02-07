@@ -1,0 +1,47 @@
+autodetach            on              # Standard: on
+crlf                  off             # Standard: off
+deflogin              off             # Standard: on
+hardcopy_append       on              # Standard: off
+startup_message       off             # Standard: on
+vbell                 off
+defscrollback         900000            # Standard: 100
+bufferfile $HOME/.screen_exchange
+#shell -
+term xterm-256color
+
+#  caption always " "                    # clear line before hardstatus
+#hardstatus alwayslastline "%{= kb}[ %{B}%H:$USER %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%= %{b}][%{B} %l %{B}%{W}%d.%0m %{b}]"
+#hardstatus alwayslastline "%{= kY}[ %{Y}%H:$USER %{Y}] %=%{w}%?%-Lw%?%{R}(%{Y}%n*%f %t%?(%u)%?%{R})%{w} %?%+Lw %?%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%c %D,%d.%M %Y"
+sorendition +b bk
+hardstatus alwayslastline "%{= kY}[ %{Y}%H:$USER %{Y}] %=%{w}%?%-Lw%?%{R}(%{Y}%n*%f %t%?(%u)%?%{R})%{w} %?%+Lw %?%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%=%="
+
+shelltitle f
+screen -t f 0
+screen -t f 1
+screen -t f 2
+screen -t f 3
+
+
+
+
+
+bind ~ activity       "activity in %n (%t) [%w:%s]~"
+bind * activity       "activity in %n (%t) [%w:%s]"
+
+bindkey ^[[1;5C next
+bindkey ^[[1;5D prev
+
+# putty
+bindkey ^[[C next
+bindkey ^[[D prev
+# linux
+bindkey ^[Oc next
+bindkey ^[Od prev
+#bindkey ^[[1;5D prev
+#bindkey ^[[1;5C next
+#bindkey ^[[1;5D prev
+#bindkey ^[[1;5C next
+#bindkey ^[[1;5D prev
+
+bind 'w' windowlist -b
+bind 'W' windows
