@@ -21,10 +21,3 @@ done
 
 echo "install additional software"
 
-hash sudo || {
-  echo "sudo not installed"
-  exit 1
-}
-exit
-
-# add steffen@dell ssh-key to .ssh/authorizised_key via Ansible
