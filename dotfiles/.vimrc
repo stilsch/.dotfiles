@@ -26,3 +26,9 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
+" Preserve last editing position in VIM
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
